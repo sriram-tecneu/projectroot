@@ -4,6 +4,7 @@
     backend:
       build: ./backend
       container_name: backend_app
+      image: ghcr.io/sriram-tecneu/project-backend:latest
       ports:
         - "5000:5000"
       environment:
@@ -21,6 +22,7 @@
         args:
           REACT_APP_API_URL: http://backend:5000
       container_name: react_app
+      image: ghcr.io/sriram-tecneu/project-frontend:latest
       ports:
         - "3001:80"
       depends_on:

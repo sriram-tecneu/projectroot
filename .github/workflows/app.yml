@@ -36,8 +36,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN_FOR_GR }}
 
-      - name: Build image
-        run: docker build -t ghcr.io/${{ github.repository }}:latest .
+      - name: Build services
+        run: docker compose build
 
       - name: Push image
         run: docker push ghcr.io/${{ github.repository }}:latest

@@ -46,6 +46,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd project
+            cd projectroot
             docker compose pull
             docker compose up -d

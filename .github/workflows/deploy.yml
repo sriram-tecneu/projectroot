@@ -22,7 +22,6 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
 
       # Build backend image
       - name: Build backend image
@@ -52,4 +51,4 @@ jobs:
             cd projectroot
             docker compose down
             git pull
-            docker compose up -d
+            docker compose up -d --build
